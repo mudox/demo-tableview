@@ -12,15 +12,9 @@ struct GitHubSearchViewModel {
 
   let navigationTitle: Driver<String>
   let repositories: Driver<[GitHub.Repository]>
-  let networkActivity: Driver<Bool>
 
   init(queryString: Driver<String>)
   {
-    let activity = ActivityTracker()
-    networkActivity = activity
-      .executing(of: "search")
-      .asDriver(onErrorJustReturn: false)
-
     let queryResult = queryString
       .throttle(0.5)
       .distinctUntilChanged()
@@ -29,18 +23,8 @@ struct GitHubSearchViewModel {
           return .just([])
         } else {
           return GitHub.search(text)
-            .do(
-              onSuccess: { _ in
-                activity.sucess("search")
-              },
-              onError: {
-                jack.error("GitHub.search error: \($0)")
-                activity.failure("search")
-              },
-              onSubscribe: {
-                activity.start("search")
-              }
-            )
+            .asObservable()
+            .track(Activity.githubSearch, by: The.activityCenter)
             .asDriver(onErrorJustReturn: [])
             .startWith([]) // when starting refresh data, clear the table view first.
         }

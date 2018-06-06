@@ -1,24 +1,26 @@
-//
-//  AppDelegate.swift
-//  TableView
-//
-//  Created by Mudox on 2018/5/30.
-//  Copyright © 2018 Mudox. All rights reserved.
-//
-
 import UIKit
+
+import MudoxKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
+  func setupNetworkAcitivtyTracking() {
+    _ = The.activityCenter
+      .combinedExecuting(of: [.githubSearch])
+      .asDriver(onErrorJustReturn: false)
+      .drive(The.app.rx.isNetworkActivityIndicatorVisible)
+  }
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UINavigationController(rootViewController: MasterViewController())
     window?.makeKeyAndVisible()
+    
+    setupNetworkAcitivtyTracking()
     
     return true
   }

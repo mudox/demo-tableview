@@ -54,10 +54,6 @@ class GitHubSearchViewController1: UIViewController {
       }
       .disposed(by: disposeBag)
 
-    vm.networkActivity
-      .drive(The.app.rx.isNetworkActivityIndicatorVisible)
-      .disposed(by: disposeBag)
-
   }
 
 }
