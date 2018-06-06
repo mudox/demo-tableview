@@ -16,6 +16,8 @@
 		F40ED92720C23FE800B292C2 /* GitHubSearchViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ED92620C23FE800B292C2 /* GitHubSearchViewController1.swift */; };
 		F40ED92920C2EE6400B292C2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40ED92820C2EE6300B292C2 /* GitHub.swift */; };
 		F45A6A6C20C796C4001AE8AE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A6B20C796C4001AE8AE /* Activity.swift */; };
+		F45A6A6F20C7E86C001AE8AE /* EditableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A6E20C7E86C001AE8AE /* EditableViewModel.swift */; };
+		F45A6A7120C7EA67001AE8AE /* EditableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A7020C7EA67001AE8AE /* EditableTableViewController.swift */; };
 		F48AC0C420BDB5BF007DD472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AC0C320BDB5BF007DD472 /* AppDelegate.swift */; };
 		F48AC0C620BDB5BF007DD472 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AC0C520BDB5BF007DD472 /* MasterViewController.swift */; };
 		F48AC0C920BDB5BF007DD472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48AC0C720BDB5BF007DD472 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		F40ED92620C23FE800B292C2 /* GitHubSearchViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchViewController1.swift; sourceTree = "<group>"; };
 		F40ED92820C2EE6300B292C2 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		F45A6A6B20C796C4001AE8AE /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F45A6A6E20C7E86C001AE8AE /* EditableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableViewModel.swift; sourceTree = "<group>"; };
+		F45A6A7020C7EA67001AE8AE /* EditableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableViewController.swift; sourceTree = "<group>"; };
 		F48AC0C020BDB5BF007DD472 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48AC0C320BDB5BF007DD472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48AC0C520BDB5BF007DD472 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F45A6A6D20C7DA34001AE8AE /* Editing Dataset */ = {
+			isa = PBXGroup;
+			children = (
+				F45A6A6E20C7E86C001AE8AE /* EditableViewModel.swift */,
+				F45A6A7020C7EA67001AE8AE /* EditableTableViewController.swift */,
+			);
+			path = "Editing Dataset";
+			sourceTree = "<group>";
+		};
 		F48AC0B720BDB5BF007DD472 = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +109,9 @@
 		F48AC0C220BDB5BF007DD472 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				F4A19E8C20C236F4001C4183 /* Github Search */,
+				F45A6A6D20C7DA34001AE8AE /* Editing Dataset */,
 				F45A6A6B20C796C4001AE8AE /* Activity.swift */,
-				F4A19E8C20C236F4001C4183 /* GithubSearch */,
 				F48AC0C320BDB5BF007DD472 /* AppDelegate.swift */,
 				F48AC0C520BDB5BF007DD472 /* MasterViewController.swift */,
 				F48AC0C720BDB5BF007DD472 /* Main.storyboard */,
@@ -108,19 +122,19 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
-		F4A19E8C20C236F4001C4183 /* GithubSearch */ = {
+		F4A19E8C20C236F4001C4183 /* Github Search */ = {
 			isa = PBXGroup;
 			children = (
+				F407B66F20C406000001F9B6 /* GitHubRepositoryCell.xib */,
 				F40ED92820C2EE6300B292C2 /* GitHub.swift */,
 				F4A19E8D20C23712001C4183 /* GitHub+TargetType.swift */,
 				F40ED92220C23C3E00B292C2 /* GitHub+Response.swift */,
 				F40ED92420C23F9500B292C2 /* GitHubSearchViewModel.swift */,
-				F407B66F20C406000001F9B6 /* GitHubRepositoryCell.xib */,
 				F407B67120C409830001F9B6 /* GitHubRepositoryCell.swift */,
 				F40ED92620C23FE800B292C2 /* GitHubSearchViewController1.swift */,
 				F407B66D20C3F7190001F9B6 /* GitHubSearchViewController2.swift */,
 			);
-			path = GithubSearch;
+			path = "Github Search";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,11 +277,13 @@
 				F45A6A6C20C796C4001AE8AE /* Activity.swift in Sources */,
 				F48AC0C620BDB5BF007DD472 /* MasterViewController.swift in Sources */,
 				F40ED92520C23F9500B292C2 /* GitHubSearchViewModel.swift in Sources */,
+				F45A6A7120C7EA67001AE8AE /* EditableTableViewController.swift in Sources */,
 				F407B66E20C3F7190001F9B6 /* GitHubSearchViewController2.swift in Sources */,
 				F4A19E8E20C23712001C4183 /* GitHub+TargetType.swift in Sources */,
 				F40ED92920C2EE6400B292C2 /* GitHub.swift in Sources */,
 				F407B67320C40B9C0001F9B6 /* GitHubRepositoryCell.swift in Sources */,
 				F40ED92720C23FE800B292C2 /* GitHubSearchViewController1.swift in Sources */,
+				F45A6A6F20C7E86C001AE8AE /* EditableViewModel.swift in Sources */,
 				F40ED92320C23C3E00B292C2 /* GitHub+Response.swift in Sources */,
 				F48AC0C420BDB5BF007DD472 /* AppDelegate.swift in Sources */,
 			);

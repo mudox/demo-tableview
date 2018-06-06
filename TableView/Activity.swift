@@ -1,9 +1,17 @@
 import MudoxKit
 
-enum Activity: ActivityType {
+enum Activity {
   case githubSearch
 }
 
+extension Activity: ActivityType {
+  
+  var isNetworkActivity: Bool {
+    return true
+  }
+  
+}
+
 extension The {
-  static let activityCenter = ActivityTracker<Activity>()
+  static let activityCenter = ActivityCenter<Activity>()
 }

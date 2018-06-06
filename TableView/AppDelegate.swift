@@ -9,19 +9,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func setupNetworkAcitivtyTracking() {
     _ = The.activityCenter
-      .combinedExecuting(of: [.githubSearch])
-      .asDriver(onErrorJustReturn: false)
+      .networkActivity
       .drive(The.app.rx.isNetworkActivityIndicatorVisible)
   }
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UINavigationController(rootViewController: MasterViewController())
     window?.makeKeyAndVisible()
-    
+
     setupNetworkAcitivtyTracking()
-    
+
     return true
   }
 

@@ -1,5 +1,4 @@
 import Moya
-import RxSwift
 
 extension GitHub {
 
