@@ -24,6 +24,7 @@
 		F48AC0CB20BDB5C1007DD472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48AC0CA20BDB5C1007DD472 /* Assets.xcassets */; };
 		F48AC0CE20BDB5C1007DD472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48AC0CC20BDB5C1007DD472 /* LaunchScreen.storyboard */; };
 		F4A19E8E20C23712001C4183 /* GitHub+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A19E8D20C23712001C4183 /* GitHub+TargetType.swift */; };
+		F4A29FD520C998230043901F /* CellExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A29FD420C998230043901F /* CellExpandableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F48AC0CD20BDB5C1007DD472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48AC0CF20BDB5C1007DD472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4A19E8D20C23712001C4183 /* GitHub+TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitHub+TargetType.swift"; sourceTree = "<group>"; };
+		F4A29FD420C998230043901F /* CellExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellExpandableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		F48AC0C220BDB5BF007DD472 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				F4A29FD320C9980E0043901F /* Cell Exapanded */,
 				F4A19E8C20C236F4001C4183 /* Github Search */,
 				F45A6A6D20C7DA34001AE8AE /* Editing Dataset */,
 				F45A6A6B20C796C4001AE8AE /* Activity.swift */,
@@ -135,6 +138,14 @@
 				F407B66D20C3F7190001F9B6 /* GitHubSearchViewController2.swift */,
 			);
 			path = "Github Search";
+			sourceTree = "<group>";
+		};
+		F4A29FD320C9980E0043901F /* Cell Exapanded */ = {
+			isa = PBXGroup;
+			children = (
+				F4A29FD420C998230043901F /* CellExpandableTableViewController.swift */,
+			);
+			path = "Cell Exapanded";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +297,7 @@
 				F45A6A6F20C7E86C001AE8AE /* EditableViewModel.swift in Sources */,
 				F40ED92320C23C3E00B292C2 /* GitHub+Response.swift in Sources */,
 				F48AC0C420BDB5BF007DD472 /* AppDelegate.swift in Sources */,
+				F4A29FD520C998230043901F /* CellExpandableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
