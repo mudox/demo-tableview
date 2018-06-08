@@ -24,7 +24,7 @@ struct GitHubSearchViewModel {
         } else {
           return GitHub.search(text)
             .asObservable()
-            .track(Activity.githubSearch, by: The.activityCenter)
+            .trackActivity(.githubSearch)
             .asDriver(onErrorJustReturn: [])
             .startWith([]) // when starting refresh data, clear the table view first.
         }

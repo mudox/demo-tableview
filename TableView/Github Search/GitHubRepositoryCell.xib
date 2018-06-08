@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gko-Op-26J">
-                    <rect key="frame" x="16" y="49" width="343" height="18"/>
+                    <rect key="frame" x="16" y="49" width="79.5" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gko-Op-26J" secondAttribute="trailing" constant="16" id="3vF-16-2af"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gko-Op-26J" secondAttribute="trailing" constant="16" id="3vF-16-2af"/>
                 <constraint firstItem="9zp-sL-122" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vHh-1x-gJk" secondAttribute="trailing" constant="16" id="CpE-1k-n1d"/>
                 <constraint firstItem="Gko-Op-26J" firstAttribute="top" secondItem="vHh-1x-gJk" secondAttribute="bottom" constant="8" symbolic="YES" id="EBo-TC-RPY"/>
                 <constraint firstItem="9zp-sL-122" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="HsJ-Qy-TeH"/>

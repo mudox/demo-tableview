@@ -1,17 +1,12 @@
 import MudoxKit
 
-enum Activity {
-  case githubSearch
-}
+extension Activity {
 
-extension Activity: ActivityType {
-  
-  var isNetworkActivity: Bool {
-    return true
-  }
-  
-}
+  static let githubSearch = Activity(
+    identifier: "githubSearch",
+    isNetworkActivity: true,
+    maxConcurrency: 1,
+    isLoggingEnbaled: false
+  )
 
-extension The {
-  static let activityCenter = ActivityCenter<Activity>()
 }
