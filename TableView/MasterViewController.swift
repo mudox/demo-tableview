@@ -19,6 +19,7 @@ class MasterViewController: FormViewController {
       Use Moya/RxSwift to model network service layer.
       MVVM + RxSwift.
       Self-sizing table view cell with Auto Layout.
+      Use DZNEmptyDataSet for empty data set interface.
       """
     )
 
@@ -30,6 +31,7 @@ class MasterViewController: FormViewController {
     form +++ Section(footer: """
       Use UISearchController to embed search bar into navigation bar (instead of as table header view).
       Self-sizing expandable cell, click to unveal repository description.
+      Use custom view for empty data set.
       """
     )
 

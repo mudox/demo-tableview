@@ -7,33 +7,10 @@ import SwiftRichString
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  func setupRichString() {
-    
-    Styles.register("emptyDataset.title", style: Style {
-      $0.font = UIFont.boldSystemFont(ofSize: 20)
-    })
-    
-    Styles.register("emptyDataset.description", style: Style {
-      $0.font = UIFont.systemFont(ofSize: 17, weight: .light)
-    })
-    
-    Styles.register("emptyDataset.description.query", style: Style {
-      $0.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-      $0.color = UIColor.black
-    })
-
-    Styles.register("emptyDataset.error", style: Style {
-      $0.color = UIColor.red
-    })
-
-  }
-
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-    setupRichString()
-
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UINavigationController(rootViewController: MasterViewController())
     window?.makeKeyAndVisible()

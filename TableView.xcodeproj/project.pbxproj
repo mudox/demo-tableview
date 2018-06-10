@@ -21,6 +21,9 @@
 		F45A6A6C20C796C4001AE8AE /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A6B20C796C4001AE8AE /* Activity.swift */; };
 		F45A6A6F20C7E86C001AE8AE /* EditableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A6E20C7E86C001AE8AE /* EditableViewModel.swift */; };
 		F45A6A7120C7EA67001AE8AE /* EditableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45A6A7020C7EA67001AE8AE /* EditableTableViewController.swift */; };
+		F46986AB20CD6E9C0047F261 /* EmptyDatasetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F46986AA20CD6E9C0047F261 /* EmptyDatasetView.xib */; };
+		F46986AD20CD70490047F261 /* EmptyDatasetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46986AC20CD70490047F261 /* EmptyDatasetView.swift */; };
+		F46986AF20CD73AC0047F261 /* RichStringStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46986AE20CD73AC0047F261 /* RichStringStyles.swift */; };
 		F48AC0C420BDB5BF007DD472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AC0C320BDB5BF007DD472 /* AppDelegate.swift */; };
 		F48AC0C620BDB5BF007DD472 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48AC0C520BDB5BF007DD472 /* MasterViewController.swift */; };
 		F48AC0C920BDB5BF007DD472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48AC0C720BDB5BF007DD472 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		F45A6A6B20C796C4001AE8AE /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F45A6A6E20C7E86C001AE8AE /* EditableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableViewModel.swift; sourceTree = "<group>"; };
 		F45A6A7020C7EA67001AE8AE /* EditableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableViewController.swift; sourceTree = "<group>"; };
+		F46986AA20CD6E9C0047F261 /* EmptyDatasetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDatasetView.xib; sourceTree = "<group>"; };
+		F46986AC20CD70490047F261 /* EmptyDatasetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDatasetView.swift; sourceTree = "<group>"; };
+		F46986AE20CD73AC0047F261 /* RichStringStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichStringStyles.swift; sourceTree = "<group>"; };
 		F48AC0C020BDB5BF007DD472 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48AC0C320BDB5BF007DD472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48AC0C520BDB5BF007DD472 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 		F44B828720CBC02D0026C9CB /* GitHubSearch2 */ = {
 			isa = PBXGroup;
 			children = (
+				F46986AA20CD6E9C0047F261 /* EmptyDatasetView.xib */,
+				F46986AC20CD70490047F261 /* EmptyDatasetView.swift */,
 				F44B828820CBC0610026C9CB /* GitHubRepositoryCell2.swift */,
 				F44B828920CBC0620026C9CB /* GitHubRepositoryCell2.xib */,
 				F407B66D20C3F7190001F9B6 /* GitHubSearchViewController2.swift */,
@@ -153,6 +161,7 @@
 		F48AC0C220BDB5BF007DD472 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				F46986AE20CD73AC0047F261 /* RichStringStyles.swift */,
 				F4A29FD320C9980E0043901F /* Expandable Section & Cell */,
 				F4A19E8C20C236F4001C4183 /* Github Search */,
 				F45A6A6D20C7DA34001AE8AE /* Editing Dataset */,
@@ -248,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F407B67020C406000001F9B6 /* GitHubRepositoryCell1.xib in Resources */,
+				F46986AB20CD6E9C0047F261 /* EmptyDatasetView.xib in Resources */,
 				F44B828B20CBC0620026C9CB /* GitHubRepositoryCell2.xib in Resources */,
 				F48AC0CE20BDB5C1007DD472 /* LaunchScreen.storyboard in Resources */,
 				F48AC0CB20BDB5C1007DD472 /* Assets.xcassets in Resources */,
@@ -330,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46986AF20CD73AC0047F261 /* RichStringStyles.swift in Sources */,
 				F45A6A6C20C796C4001AE8AE /* Activity.swift in Sources */,
 				F48AC0C620BDB5BF007DD472 /* MasterViewController.swift in Sources */,
 				F4AA4BB420CA1F0500E66951 /* ExpandableTableViewCell.swift in Sources */,
@@ -337,6 +348,7 @@
 				F45A6A7120C7EA67001AE8AE /* EditableTableViewController.swift in Sources */,
 				F44B828420CBBD900026C9CB /* GitHubSearchViewModel1.swift in Sources */,
 				F407B66E20C3F7190001F9B6 /* GitHubSearchViewController2.swift in Sources */,
+				F46986AD20CD70490047F261 /* EmptyDatasetView.swift in Sources */,
 				F4A19E8E20C23712001C4183 /* GitHub+TargetType.swift in Sources */,
 				F40ED92920C2EE6400B292C2 /* GitHub.swift in Sources */,
 				F407B67320C40B9C0001F9B6 /* GitHubRepositoryCell1.swift in Sources */,
@@ -493,7 +505,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YSQ5ZCLFSD;
 				INFOPLIST_FILE = TableView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mudox.MudoxKit.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -509,7 +524,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YSQ5ZCLFSD;
 				INFOPLIST_FILE = TableView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mudox.MudoxKit.TableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

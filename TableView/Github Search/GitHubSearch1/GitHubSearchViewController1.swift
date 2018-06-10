@@ -92,29 +92,27 @@ extension GitHubSearchViewController1: DZNEmptyDataSetSource {
   func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
     switch viewModel.emptyDatasetReason.value {
     case .noInput:
-      return "No Input".set(style: Styles["emptyDataset.title"]!)
+      return "No Input".set(style: Style.title)
     case .querying:
       return nil
-    case .noMatch, .error:
-      return "Oops!".set(style: Styles["emptyDataset.title"]!)
+    case .noMatch:
+      return "Oops!".set(style: Style.title)
+    case .error:
+      return "Oops!".set(style: Style.error)
     }
 
   }
 
   func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-    let styleGroup = StyleGroup(base: Styles["emptyDataset.description"]!, [
-      "query": Styles["emptyDataset.description.query"]!
-    ])
-    
     switch viewModel.emptyDatasetReason.value {
     case .noInput:
-      return "Input in search bar to start searching".set(style: Styles["emptyDataset.description"]!)
+      return "Input in search bar to start searching".set(style: Style.detailBase)
     case .querying:
       return nil
     case .noMatch(let text):
-      return "No match for <query>\(text)</query>".set(style: styleGroup)
+      return "No match for <q>\(text)</q>".set(style: StyleGroup.detail)
     case .error:
-      return "An error occured".set(style: Styles["emptyDataset.error"]!)
+      return "An error occurred".set(style: Style.error)
     }
   }
 

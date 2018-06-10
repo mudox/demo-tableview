@@ -10,9 +10,9 @@ class GitHubSearchViewController2: UIViewController {
   var disposeBag = DisposeBag()
 
   var tableView: UITableView!
-
   var searchBar: UISearchBar!
-  
+  var emptyView: EmptyDatasetView!
+
   var viewModel: ViewModel!
 
   override func viewDidLoad() {
@@ -23,12 +23,12 @@ class GitHubSearchViewController2: UIViewController {
   }
 
   func setupSubviews() {
-    
+
     tableView = UITableView(frame: view.bounds, style: .plain)
     with(tableView!) { tv in
       view.addSubview(tv)
       tv.register(UINib(nibName: "GitHubRepositoryCell2", bundle: nil), forCellReuseIdentifier: "cell")
-      
+
       // Dynamic row height
       tv.estimatedRowHeight = 120
       tv.rowHeight = UITableViewAutomaticDimension
@@ -40,17 +40,21 @@ class GitHubSearchViewController2: UIViewController {
       sc.hidesNavigationBarDuringPresentation = false
       searchBar = sc.searchBar
     }
-    
+
     // embed search bar into navigation bar
     navigationItem.searchController = searchController
     navigationItem.hidesSearchBarWhenScrolling = false
-    
+
     with(searchBar) { bar in
       bar.textContentType = .name
       bar.autocapitalizationType = .none
       bar.autocorrectionType = .no
       bar.spellCheckingType = .no
     }
+
+    emptyView = EmptyDatasetView.loadFromNib()
+    view.addSubview(emptyView)
+
   }
 
   func setupViewModel() {
@@ -62,7 +66,7 @@ class GitHubSearchViewController2: UIViewController {
         selectedIndexPath: tableView.rx.itemSelected.asDriver()
       )
     )
-    
+
     viewModel.title
       .drive(navigationItem.rx.title)
       .disposed(by: disposeBag)
@@ -72,6 +76,15 @@ class GitHubSearchViewController2: UIViewController {
         row, item, cell in
         cell.show(item)
       }
+      .disposed(by: disposeBag)
+
+    viewModel.items
+      .map { !$0.isEmpty }
+      .drive(emptyView.rx.isHidden)
+      .disposed(by: disposeBag)
+
+    viewModel.emptyDatasetReason
+      .drive(emptyView.reason)
       .disposed(by: disposeBag)
 
   }
