@@ -2,19 +2,16 @@ import UIKit
 
 import MudoxKit
 
-class GitHubRepositoryCell: UITableViewCell {
-  
+class GitHubRepositoryCell1: UITableViewCell {
   
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var starsLabel: UILabel!
   
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-  }
-  
   override func awakeFromNib() {
     super.awakeFromNib()
+    
+    selectionStyle = .none
     
     with(starsLabel) { lb in
       // round corner
@@ -26,13 +23,13 @@ class GitHubRepositoryCell: UITableViewCell {
       lb.textColor = .white
       
       // font
-      lb.font = UIFont.monospacedDigitSystemFont(ofSize: 13, weight: .regular)
+      lb.font = UIFont.monospacedDigitSystemFont(ofSize: 13, weight: .bold)
     }
   }
 
-  func reload(_ repo: GitHub.Repository) {
+  func show(_ repo: GitHub.Repository) {
     nameLabel.text = repo.name
-    starsLabel.text = " \(repo.stars) "
+    starsLabel.text = "  \(repo.stars)  "
     descriptionLabel.text = repo.description
   }
 

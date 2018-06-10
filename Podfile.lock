@@ -4,6 +4,7 @@ PODS:
   - CocoaLumberjack/Swift (3.3.0):
     - CocoaLumberjack/Default
   - Differentiator (3.0.2)
+  - DZNEmptyDataSet (1.8.1)
   - Eureka (4.1.1)
   - JacKit (1.0):
     - CocoaLumberjack/Swift (~> 3.3.0)
@@ -16,6 +17,9 @@ PODS:
     - RxSwift (~> 4.0)
   - MudoxKit (0.1.0):
     - MudoxKit/Core (= 0.1.0)
+  - MudoxKit/ActivityCenter (0.1.0):
+    - RxCocoa
+    - RxSwift
   - MudoxKit/Core (0.1.0):
     - JacKit
     - RxCocoa
@@ -37,23 +41,28 @@ PODS:
     - RxSwiftExt/Core (= 3.2.0)
   - RxSwiftExt/Core (3.2.0):
     - RxSwift (~> 4.0)
+  - SwiftRichString (2.0.1)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - Eureka
   - JacKit (from `/Users/mudox/Develop/Apple/Frameworks/JacKit/`)
   - Moya/RxSwift
   - MudoxKit (from `/Users/mudox/Develop/Apple/Frameworks/MudoxKit/`)
+  - MudoxKit/ActivityCenter (from `/Users/mudox/Develop/Apple/Frameworks/MudoxKit/`)
   - MudoxKit/Eureka (from `/Users/mudox/Develop/Apple/Frameworks/MudoxKit/`)
   - MudoxKit/MBProgressHUD (from `/Users/mudox/Develop/Apple/Frameworks/MudoxKit/`)
   - RxCocoa
   - RxDataSources
   - RxSwift
+  - SwiftRichString
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CocoaLumberjack
     - Differentiator
+    - DZNEmptyDataSet
     - Eureka
     - MBProgressHUD
     - Moya
@@ -62,6 +71,7 @@ SPEC REPOS:
     - RxDataSources
     - RxSwift
     - RxSwiftExt
+    - SwiftRichString
 
 EXTERNAL SOURCES:
   JacKit:
@@ -73,17 +83,19 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
   JacKit: b0038a8a0acaaaa1117e14a0276cabcf6b4c3d10
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Moya: a725035953bc1c0eb1be505ab903984501d82440
-  MudoxKit: e6a849edd044c4708a6bb2dab3e2ff52d0a81b14
+  MudoxKit: db25b2ca044fe4d56628ebead8104f74a2bc9561
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
+  SwiftRichString: 3b29b5f2eb0eb244497532f2fd2ec26318eae584
 
-PODFILE CHECKSUM: 19be2632890399d1c12f31e6b59a4064e43962c3
+PODFILE CHECKSUM: ac7efee389cd5a91e16071a572d1c60dea1abe7f
 
 COCOAPODS: 1.5.2

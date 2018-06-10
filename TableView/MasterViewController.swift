@@ -16,8 +16,9 @@ class MasterViewController: FormViewController {
     mdx.setBackButtonTitleEmpty()
 
     form +++ Section(footer: """
-      User inputs in search bar trigger GitHub search requests.
-      Show search bar in the table view.
+      Use Moya/RxSwift to model network service layer.
+      MVVM + RxSwift.
+      Self-sizing table view cell with Auto Layout.
       """
     )
 
@@ -27,9 +28,8 @@ class MasterViewController: FormViewController {
     }
 
     form +++ Section(footer: """
-      User inputs in search bar trigger GitHub search requests.
-      Show search bar in navigation bar.
-      It share the same underlying view model as Github Search #1
+      Use UISearchController to embed search bar into navigation bar (instead of as table header view).
+      Self-sizing expandable cell, click to unveal repository description.
       """
     )
 
@@ -39,33 +39,26 @@ class MasterViewController: FormViewController {
     }
 
     form +++ Section(footer: """
-      Edting static single sectioned dateset.
-      """
-    )
-
-    <<< ButtonRow() {
-      $0.title = "⚠️ Editing Dataset #1"
-      $0.presentationMode = .show(GitHubSearchViewController2.init)
-    }
-
-    form +++ Section(footer: """
-      Edting static sectioned dateset.
-      """
-    )
-
-    <<< ButtonRow() {
-      $0.title = "⚠️ Editing Dataset #2"
-      $0.presentationMode = .show(GitHubSearchViewController2.init)
-    }
-    
-    form +++ Section(footer: """
-      Talbe view cell expandable.
+      Use cell to simulate section, click to expand the "section", unvealing the rows of the section.
+      Use traditional MVC way (Not MVVM with RxSwift).
       """
       )
       
       <<< ButtonRow() {
-        $0.title = "⚠️ Expandable cell"
-        $0.presentationMode = .show(CellExpandableTableViewController.init)
+        $0.title = "Expandable cells #1"
+        $0.presentationMode = .show(ExpandableTableViewController.init)
     }
+    
+    form +++ Section(footer: """
+      Use RxDataSources animated table view source to expand cell with animation.
+      Use MVVM + RxSwift.
+      """
+      )
+      
+      <<< ButtonRow() {
+        $0.title = "Expandable cells #2"
+        $0.presentationMode = .show(ExpandableTableViewController.init)
+    }
+
   }
 }
